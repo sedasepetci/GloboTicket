@@ -1,5 +1,6 @@
 ﻿using AutoMapper;
-using GloboTicket.TicketManagement.Application.Features.Events;
+using GloboTicket.TicketManagement.Application.Features.Events.Commands.Queries.GetEventDetail;
+using GloboTicket.TicketManagement.Application.Features.Events.Commands.Queries.GetEventsList;
 using GloboTicket.TicketManagement.Domain.Entities;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ using System.Threading.Tasks;
 
 namespace GloboTicket.TicketManagement.Application.Profiles
 {
-   public class MappingProfiles:Profile
+    public class MappingProfiles:Profile
     {
         public MappingProfiles()
         {

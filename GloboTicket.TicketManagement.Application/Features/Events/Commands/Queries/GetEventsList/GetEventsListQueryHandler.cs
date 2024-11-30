@@ -8,7 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace GloboTicket.TicketManagement.Application.Features.Events
+namespace GloboTicket.TicketManagement.Application.Features.Events.Commands.Queries.GetEventsList
 {
     public class GetEventsListQueryHandler : IRequestHandler<GetEventsListQuery, List<EventListVm>>
     {
@@ -23,7 +23,7 @@ namespace GloboTicket.TicketManagement.Application.Features.Events
 
         public async Task<List<EventListVm>> Handle(GetEventsListQuery request, CancellationToken cancellationToken)
         {
-           var allEvents=(await _eventRepository.ListAllAsync()).OrderBy(x=>x.Date);
+            var allEvents = (await _eventRepository.ListAllAsync()).OrderBy(x => x.Date);
             return _mapper.Map<List<EventListVm>>(allEvents);
         }
     }
