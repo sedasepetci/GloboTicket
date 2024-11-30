@@ -9,9 +9,9 @@ using System.Threading.Tasks;
 
 namespace GloboTicket.TicketManagement.Application.Profiles
 {
-   public class MappingProfiels:Profile
+   public class MappingProfiles:Profile
     {
-        public MappingProfiels()
+        public MappingProfiles()
         {
             CreateMap<Event,EventListVm>().ReverseMap();
             CreateMap<Event,EventDetailVm>().ReverseMap();
